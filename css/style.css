@@ -20,8 +20,8 @@ img {
   margin-top: 35px;
   margin-bottom: 20px;
   border-radius: 50%;
-  border-style: outset;
-  max-height: 100px;
+  box-shadow: 2px 2px;
+  max-height: 130px;
 }
 .miniature {
   text-align: center;
@@ -44,6 +44,15 @@ address>p{
 address>a{
   align-items: center;
 }
+h1{
+  font-size: 1.4em;
+}
+h2{
+  font-size: 1.3em;
+}
+h3{
+  line-height: 20px;
+}
 h5{
   color: var(--main-bg-color);
   font-weight: bold;
@@ -53,7 +62,6 @@ h5{
 }
 .propos {
   margin-top: 20px;
-  text-align: justify-all;
   color: black;
 }
 h5{
@@ -100,12 +108,10 @@ aside.loisir i.fa {
   }
   aside.propos h3{
     padding-top: 20px;
-    text-align: justify-all;
     margin: 0 30px;
   }
 /********************** section  droite    *******************/
 #sectionRight {
-  diplay flex: row;
   background-color: white;
   padding-left: 50px;
   width: 73%;
@@ -115,7 +121,7 @@ aside.loisir i.fa {
 {
   display:flex;
   width:100%;
-  margin-left:25px;
+  /*margin-left:25px;*/
   margin-bottom:30px;
 }
 .data>div
@@ -133,14 +139,18 @@ aside.loisir i.fa {
 }
 .formation{
   padding-top: 40px;
-  padding-right: 10px;
+  /*padding-right: 10px;*/
+  line-height: 20px;
 }
 h4{ 
   font-size:20px;
-  margin-left:30px;
+  margin-left:30px
   margin-right:5px;
   border-bottom: var(--main-bg-color) solid 2px;
   padding-bottom:5px;
+}
+.space {
+    margin-right: 15px;
 }
 hr {
   width: 7%;
@@ -166,6 +176,9 @@ hr {
 .fa-circle.fa-xs {
   color: var(--main-bg-color);
 }
+.experience{
+  line-height: 20px;
+}
 
 /*************************************/
 .recommandation {
@@ -173,6 +186,7 @@ hr {
   flex-direction: row;
   justify-content: space-around;
   padding: 20px 0px;
+  line-height: 20px;
 }
 
 section.recommandation span {
@@ -187,8 +201,8 @@ li {
   margin-left: 2px;
 }
 /***********Média  querie***with directive CSS******  Responsive Design  side ************/
-@media screen and (max-width: 900px) {
-  main {
+@media screen and (max-width: 800px){
+ main {
     flex-direction: column;
     width: 100%;
   }
@@ -200,14 +214,7 @@ li {
         width: 100%;
         padding-left:15px;
         padding-right: 15px;
-
     }
-#sectionLeft .propos{
-       display: none;
-}
-#sectionLeft .loisir{
-       display: none;
-}
 .contact{
        padding-left: 30px;
 }
@@ -222,12 +229,69 @@ li {
         display: block;
         text-align: center;
         }
-        hr.shortLine{
+hr.shortLine{
           display: none;
         }
+ .name {
+  margin-top: 25px;
+  font-weight: bold;
+  color: var(--main-bg-color);
+  font-size: 2rem;
+  font-weight: 400;
 }
-h3 {
-  text-align: center;
-  display: block;
+.name em {
+  color: black;
+}
+  img{
+     max-height: 100px;
+}
+h2{
+  font-size: 0.9em;
+}
+h3{
+  line-height: 20px;
+}
+
+}
+/***********Média  querie***with directive CSS******  Responsive Design  side ************/}
+@media screen and (max-width: 512px) {
+  main {
+    flex-direction: column;
+    width: 100%;
   }
+  section#sectionLeft {
+    width: 100%;
+     margin-top: 130px;
+  }
+  section#sectionRight {
+        width: 100%;
+        padding-left:5px;
+        padding-right: 5px;
+    }
+.contact{
+       padding-left: 30px;
+}
+  #sectionRight header{
+        position: absolute;
+        top: 12px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        display: block;
+        text-align: center;
+}
+hr.shortLine{
+          display: none;
+        }
+.formation span.normal{
+  display: none;
+}
+img{
+  max-height: 50px;
+}
+article span.normal{
+  display: none;
+}
 }
