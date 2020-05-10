@@ -93,10 +93,10 @@ aside.loisir .fa{
 {
   margin:5px;
 }
-/*.data>div:nth-child(2)
+.data>div:nth-child(2)
 {
   min-width:30%;
-}*/
+}
 .data p
 {
   color:#757575;
