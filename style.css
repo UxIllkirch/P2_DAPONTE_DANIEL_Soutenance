@@ -20,7 +20,6 @@ img {
   margin-top: 35px;
   margin-bottom: 20px;
   border-radius: 50%;
-  border: rgb(26, 26, 26);
   border-style: outset;
   max-height: 100px;
 }
@@ -29,71 +28,93 @@ img {
 }
 /**********************sectionn gauche *********************/
 #sectionLeft {
+  display: flex;
+  flex-direction:column;
   background-color: var(--main-bg-color);
   width: 33%;
   height: auto;
 }
-.effect {
-  font-weight: bold;
+address{
+  padding: 30px;
 }
-p.h {
-  margin-top: 10px;
+address>p {
+  padding-top: 10px;
 }
-.h {
-  padding-left: 20px;
-}
-h5 {
-  background-color: black;
+h5{
   color: var(--main-bg-color);
   font-weight: bold;
   font-size: 1.1rem;
   text-align: center;
-  padding: 5px;
+  background-color: black;
 }
-aside.propos {
+.propos {
   margin-top: 20px;
-  padding: 0px 20px 20px 20px;
-  margin-bottom: 20px;
+  text-align: justify-all;
+  color: black;
 }
-.propos a {
+h5{
+  padding: 7px 7px;
+}
+.contact a {
   text-align: justify-all;
   text-decoration: none;
   color: black;
 }
-h5.loisir {
-  margin-top: 100px;
-}
 h6 {
-  padding: 20px;
+  padding-bottom: 20px;
+  font-weight: 18px;
 }
-aside.icones {
+.icones {
   display: flex;
   justify-content: space-evenly;
   margin: 10px 0px;
-  flex: 2;
+  flex: 3;
 }
-aside.icones i {
+aside.loisir .fa{
   font-size: 35px;
 }
+
 /********************** section  droite    *******************/
 #sectionRight {
+  diplay flex: row;
   background-color: white;
   padding-left: 60px;
   width: 73%;
+  word-wrap:break-word;
 }
-.rubrique {
+.data
+{
   display:flex;
-  margin-top: 30px;
-  font-weight: bold;
+  width:100%;
+  margin-left:25px;
+  margin-bottom:30px;
 }
-hr.shortLine{
-  width: 7%;
-  height: 2px;
-  margin-top: 2px;
-  border-top: 1px solid var(--main-bg-color);
+.data>div
+{
+  margin:5px;
+}
+.data>div:nth-child(2)
+{
+  min-width:30%;
+}
+.data p
+{
+  color:#757575;
+  font-weight:bold;
+}
+.formation{
+  padding-top: 40px;
+}
+h4{ 
+  
+  font-size:20px;
+  margin-left:30px;
+  margin-right:5px;
+  border-bottom: var(--main-bg-color) solid 2px;
+  padding-bottom:5px;
 }
 hr {
-  width: 95%;
+  width: 7%;
   height: 2px;
   margin-top: 6px;
   border-top: 1px solid var(--main-bg-color);
@@ -104,29 +125,10 @@ hr {
   font-weight: bold;
   color: var(--main-bg-color);
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 .name em {
   color: black;
-}
-/******  section  droite   Tableaux ****************/
-table {
-  border-collapse: collapse;
-}
-th,td {
-  text-align: left;
-  padding: 15px 15px;
-}
-#t01,
-#t02,
-#t03 {
-  margin-top: 30px;
-}
-td:first-child {
-  width: 30%;
-}
-table #t03 {
-  width: 100%;
 }
 .fa-graduation-cap,
 .fa-wrench,
@@ -141,24 +143,35 @@ table #t03 {
 .fa-music {
   color: black;
   }
-aside.icones i.fa {
+aside.loisir i.fa {
     display: inline-block;
     justify-content: space-between;
-    border-radius: 37px;
+    border-radius: 50px;
     box-shadow: black 0 0 0 1px;
     padding: 0.2em 0.2em;
   }
+  aside.loisir{
+    padding-top: 25px;
+
+  }
+  .propos {
+    padding-bottom: 20px;
+
+  }
+  aside.propos h3{
+    padding-top: 20px;
+    text-align: justify-all;
+    margin: 0 30px;
+  }
 /*************************************/
-.article2 {
+.recommandation {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 20px 0px;
 }
-section.article2 h3 {
-  font-size: 37px;
-}
-section.article2 span {
+
+section.recommandation span {
   font-weight: normal;
 }
 ul {
@@ -180,13 +193,24 @@ li {
      margin-top: 130px;
   }
   section#sectionRight {
-    width: 100%;
-    padding-left:15px;
-    padding-right: 15px;
+        width: 100%;
+        padding-left:15px;
+        padding-right: 15px;
 
     }
+#sectionLeft .propos{
+       display: none;
+}
+#sectionLeft .loisir{
+       display: none;
+}
+.contact{
+       padding-left: 30px;
+}
+
+
   #sectionRight header{
-    position: absolute;
+        position: absolute;
         top: 12px;
         text-align: center;
         margin-left: auto;
@@ -199,10 +223,12 @@ li {
         hr.shortLine{
           display: none;
         }
+}
 #sectionRight  header  {
         width:auto;
         margin-left: 0px;
     }
+
 h3 {
   text-align: center;
   display: block;
