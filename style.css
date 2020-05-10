@@ -93,10 +93,10 @@ aside.loisir .fa{
 {
   margin:5px;
 }
-.data>div:nth-child(2)
+/*.data>div:nth-child(2)
 {
   min-width:30%;
-}
+}*/
 .data p
 {
   color:#757575;
@@ -104,6 +104,12 @@ aside.loisir .fa{
 }
 .formation{
   padding-top: 40px;
+  padding-right: 10px;
+}
+.ofrmation span.normal{
+  padding-right: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 h4{ 
   
