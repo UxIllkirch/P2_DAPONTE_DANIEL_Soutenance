@@ -121,7 +121,7 @@ aside.loisir i.fa {
 {
   display:flex;
   width:100%;
-  /*margin-left:25px;*/
+  padding-top: 25px;
   margin-bottom:30px;
 }
 .data>div
